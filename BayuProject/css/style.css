@@ -1,0 +1,212 @@
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+}
+
+.header {
+  background-color: #007BFF;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+
+
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.menu-content a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-content a:hover {
+  background: #f0f0f0;
+}
+
+.menu-content.show {
+  display: block;
+}
+
+.media-container {
+  background-image: url("img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  min-height: 500px;
+}
+
+.media-item {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.media-item img,
+.media-item video {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.upload-form {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.upload-form input,
+.upload-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.upload-form button {
+  padding: 12px;
+  width: 100%;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.media-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.media-item {
+  position: relative;
+}
+
+.media-menu-content {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  display: none;
+  z-index: 100;
+}
+
+.media-menu-content.show {
+  display: block;
+}
+
+.media-menu-content button {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.media-menu-content button:hover {
+  background-color: #f0f0f0;
+}
+
+.vcard-single {
+  max-width: 500px;
+  background: white;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.vcard-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #007BFF;
+}
+
+.vcard-single h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.vcard-title {
+  font-size: 16px;
+  color: #007BFF;
+  margin: 10px 0 20px;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+}
+
+.auth-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.auth-container a {
+  color: #007BFF;
+  text-decoration: none;
+}
+

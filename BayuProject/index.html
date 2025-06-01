@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Keluarga</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="img/profil.png" alt="Profil" class="profile-img" />
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      <div class="menu-content" id="menu">
+        <a href="upload.html">Upload</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="kreator.html">Kreator</a>
+        <a href="kontak.html">Kontak</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+      </div>
+    </div>
+
+    <div class="media-container">
+      <p>(Belum ada konten)</p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="App.js"></script>
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("menu");
+        menu.classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
