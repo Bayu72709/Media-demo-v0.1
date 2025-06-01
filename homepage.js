@@ -1,3 +1,28 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndpassword,
+} from "https://www.gstatic.com/firebasejs/11.8.1/firebase-auth.js";
+import {
+  getFirestore,
+  setDoc,
+  doc,
+} from "https://www.gstatic.com/firebasejs/11.8.1/firebase-firestore.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAan995D-cTvdCkcUHkfkayOXmdkpPJ_WE",
+  authDomain: "login-projek-23e19.firebaseapp.com",
+  projectId: "login-projek-23e19",
+  storageBucket: "login-projek-23e19.firebasestorage.app",
+  messagingSenderId: "23167259173",
+  appId: "1:23167259173:web:43251c1234afc459ae25cc",
+};
+
+
  // Initialize Firebase
   const app = initializeApp(firebaseConfig);
 
