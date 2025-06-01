@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upload Foto / Video</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="header">
+    <h1>Upload Konten</h1>
+  </div>
+
+  <div class="upload-form">
+    <form id="uploadForm">
+      <label for="judul">Judul</label>
+      <input type="text" id="judul" required />
+
+      <label for="deskripsi">Deskripsi</label>
+      <textarea id="deskripsi" rows="3" required></textarea>
+
+      <label for="file">Pilih Foto / Video</label>
+      <input type="file" id="file" accept="image/*,video/*" required />
+
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("uploadForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const judul = document.getElementById("judul").value.trim();
+      const deskripsi = document.getElementById("deskripsi").value.trim();
+      const fileInput = document.getElementById("file").files[0];
+
+      if (!fileInput) {
+        alert("Silakan pilih file.");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function () {
+        const fileData = reader.result;
+
+        const item = {
+          judul: judul,
+          deskripsi: deskripsi,
+          file: fileData,
+          type: fileInput.type
+        };
+
+        let uploads = JSON.parse(localStorage.getItem("uploads") || "[]");
+        uploads.unshift(item);
+        localStorage.setItem("uploads", JSON.stringify(uploads));
+
+        alert("Berhasil di-upload!");
+        window.location.href = "index.html";
+      };
+
+      reader.readAsDataURL(fileInput);
+    });
+  </script>
+
+</body>
+</html>
